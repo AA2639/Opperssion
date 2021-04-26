@@ -3092,7 +3092,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: dd69f5094c94c524caa27e947585ff73, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -3647,12 +3647,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3906406480124002140, guid: 950d6c1426b6c984d85868fe455bb9fa, type: 3}
       propertyPath: clips.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3906406480124002140, guid: 950d6c1426b6c984d85868fe455bb9fa, type: 3}
       propertyPath: clips.Array.data[3]
       value: 
       objectReference: {fileID: 8300000, guid: 01c97b38dbbdfb947aff7c91fff1efbe, type: 3}
+    - target: {fileID: 3906406480124002140, guid: 950d6c1426b6c984d85868fe455bb9fa, type: 3}
+      propertyPath: clips.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3d76037923e674385a5572f481a122bb, type: 3}
     - target: {fileID: 3906406480124002215, guid: 950d6c1426b6c984d85868fe455bb9fa, type: 3}
       propertyPath: Loop
       value: 0

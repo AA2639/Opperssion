@@ -62,14 +62,14 @@ public class AlexController : MonoBehaviour
         if (collisioner.gameObject.tag == "Bullet")
         {
             health -= 10;
-            anim.SetTrigger("BeingHit");
+            //anim.SetTrigger("BeingHit");
 
-            if (health <= 0)
-            {
-                isDead = true;
-                anim.SetLayerWeight(1, 0);
-                anim.SetBool("Dead", true);
-            }
+            //if (health <= 0)
+            //{
+            //    isDead = true;
+            //    anim.SetLayerWeight(1, 0);
+            //    anim.SetBool("Dead", true);
+            //}
         }
     }
 

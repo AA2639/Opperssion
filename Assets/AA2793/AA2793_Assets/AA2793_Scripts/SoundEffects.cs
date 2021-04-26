@@ -11,16 +11,13 @@ public class SoundEffects : MonoBehaviour
 
     private void Awake()
     {
-        //Assigning animator to anim
-
         audioSource = GetComponent<AudioSource>();
-
     }
 
     //Animation Alex_Run_Back
     private void StepBackSound()
     {
-        Debug.Log("moving forward");
+        //Debug.Log("moving forward");
         AudioClip clip = clips[0];
         audioSource.PlayOneShot(clip);
     }
@@ -42,18 +39,18 @@ public class SoundEffects : MonoBehaviour
     //Animation AlexForwardJumpUpEditable and AlexJumpUPEditable
     private void JumpingSound()
     {
-        Debug.Log("im jumping");
+        audioSource.Stop(); //Stoppping ChargeSound()
+        //Debug.Log("im jumping");
         AudioClip clip = clips[3];
         audioSource.PlayOneShot(clip);
     }
 
-    //Not yet implemented
-    //private void JumpChargeSound()
-    //{
-    //    Debug.Log("playing delay");
-    //    audioSource.PlayDelayed(delay);
-    //    Debug.Log(audioSource);
-    //}
+    //AlexJumpReadyIdle
+    private void JumpChargeSound()
+    {
+        AudioClip clip = clips[4];
+        audioSource.PlayOneShot(clip);
+    }
 
 
 }
