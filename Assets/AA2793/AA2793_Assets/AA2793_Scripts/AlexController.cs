@@ -152,7 +152,7 @@ public class AlexController : MonoBehaviour
     }
 
     //*****************************************************************************
-    
+
     //Locking the mouse until ESC is pressed.
     public void UpdateCursorLock()
     {
@@ -269,7 +269,7 @@ public class AlexController : MonoBehaviour
     void Update()
     {
         
-        UpdateCursorLock(); //Listening for ESC
+        //UpdateCursorLock(); //Listening for ESC
 
         //Is dead, let it go.
         if (isDead)
