@@ -8,6 +8,7 @@ public class MainMenu : MonoBehaviour
 
     public string firstLevel;
     public GameObject screenOptions;
+    public GameObject killMutants;
 
     // Start is called before the first frame update
     void Start()
@@ -28,12 +29,15 @@ public class MainMenu : MonoBehaviour
 
     public void OpenOptions()
     {
+        killMutants.SetActive(false);
         screenOptions.SetActive(true);
+        
     }
 
     public void CloseOptions()
     {
         screenOptions.SetActive(false);
+        killMutants.SetActive(true);
     }
 
     public void QuitGame()

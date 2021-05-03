@@ -37,8 +37,8 @@ public class AlexController : MonoBehaviour
     [SerializeField] float mouseXSensitivity = 0.5f;
     [SerializeField] float mouseYSensitivity = 0.5f;
 
-    bool escapePressed = false;
-    bool cursorIsLocked = true;
+    //bool escapePressed = false;
+    //bool cursorIsLocked = true;
 
     bool onGround = true;
     float groundRayDist = 2f;
@@ -62,14 +62,14 @@ public class AlexController : MonoBehaviour
         if (collisioner.gameObject.tag == "Bullet")
         {
             health -= 10;
-            //anim.SetTrigger("BeingHit");
+            anim.SetTrigger("BeingHit");
 
-            //if (health <= 0)
-            //{
-            //    isDead = true;
-            //    anim.SetLayerWeight(1, 0);
-            //    anim.SetBool("Dead", true);
-            //}
+            if (health <= 0)
+            {
+                isDead = true;
+                anim.SetLayerWeight(1, 0);
+                anim.SetBool("Dead", true);
+            }
         }
     }
 
@@ -139,38 +139,38 @@ public class AlexController : MonoBehaviour
     }
 
     //Input system Cancel (ESC)
-    public void OnEscape (InputAction.CallbackContext context)
-    {
-        if (context.ReadValue<float>() == 1)
-        {
-            escapePressed = true;
-        }
-        else
-        {
-            escapePressed = false;
-        }
-    }
+    //public void OnEscape (InputAction.CallbackContext context)
+    //{
+    //    if (context.ReadValue<float>() == 1)
+    //    {
+    //        escapePressed = true;
+    //    }
+    //    else
+    //    {
+    //        escapePressed = false;
+    //    }
+    //}
 
     //*****************************************************************************
 
     //Locking the mouse until ESC is pressed.
-    public void UpdateCursorLock()
-    {
-        if (escapePressed)
-        {
-            cursorIsLocked = false;
-        }
-        if (cursorIsLocked)
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
-        }
-        else
-        {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-        }
-    }
+    //public void UpdateCursorLock()
+    //{
+    //    if (escapePressed)
+    //    {
+    //        cursorIsLocked = false;
+    //    }
+    //    if (cursorIsLocked)
+    //    {
+    //        Cursor.lockState = CursorLockMode.Locked;
+    //        Cursor.visible = false;
+    //    }
+    //    else
+    //    {
+    //        Cursor.lockState = CursorLockMode.None;
+    //        Cursor.visible = true;
+    //    }
+    //}
 
     //Moving Alex
     void Move(Vector2 direction)

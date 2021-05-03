@@ -9,18 +9,10 @@ public class PauseMenu : MonoBehaviour
     public GameObject optionsScreen, pauseScreen;
 
 
+    public string mainMenuScene;
     bool escapePressed;
     private bool isPaused;
-
     bool cursorIsLocked = true;
-
-    public string mainMenuScene;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
 
 
